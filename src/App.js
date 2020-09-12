@@ -3,8 +3,10 @@ import React from 'react';
 import { TraditionalApiAccess } from './TraditionalApiAccess';
 import { SimulateLoadingDelay } from './SimulateLoadingDelay';
 import { ReactQueryApiAccess } from './ReactQueryApiAccess';
+import { useWorkerPrefetch } from './useWorkerPrefetch';
 
 export function App() {
+    useWorkerPrefetch('todos');
     return (
         <>
             <SimulateLoadingDelay>
